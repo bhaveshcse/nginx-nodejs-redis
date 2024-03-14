@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 # nginx-nodejs-redis
 This is sample project to show number of website visitors.
 =======
 ## Compose sample application
-
 ## Node.js application with Nginx proxy and Redis database
-
 Project structure:
 ```
 .
@@ -57,36 +54,29 @@ When deploying the application, docker compose maps port 80 of the nginx service
 > Redis runs on port 6379 by default. Make sure port 6379 on the host is not being used by another container, otherwise the port should be changed.
 
 ## Deploy with docker compose
-
 ```
 $ docker compose up -d
 [+] Running 24/24
- ⠿ redis Pulled                                                                                                                                                                                                                      ...
-   ⠿ 565225d89260 Pull complete                                                                                                                                                                                                      
+ ⠿ redis Pulled                                                                                                                               
 [+] Building 2.4s (22/25)
- => [nginx-nodejs-redis_nginx internal] load build definition from Dockerfile                                                                                                                                                         ...
+ => [nginx-nodejs-redis_nginx internal] load build definition from Dockerfile                                             ...
 [+] Running 5/5
- ⠿ Network nginx-nodejs-redis_default    Created                                                                                                                                                                                      
- ⠿ Container nginx-nodejs-redis-web2-1   Started                                                                                                                                                                                      
- ⠿ Container nginx-nodejs-redis-redis-1  Started                                                                                                                                                                                      
- ⠿ Container nginx-nodejs-redis-web1-1   Started                                                                                                                                                                                      
+ ⠿ Network nginx-nodejs-redis_default    Created      
+ ⠿ Container nginx-nodejs-redis-web2-1   Started      
+ ⠿ Container nginx-nodejs-redis-redis-1  Started     
+ ⠿ Container nginx-nodejs-redis-web1-1   Started  
  ⠿ Container nginx-nodejs-redis-nginx-1  Started
 ```
 
 
 ## Expected result
-
 Listing containers must show three containers running and the port mapping as below:
-
-
 ```
 docker-compose ps
 ```
 
 ## Testing the app
-
 After the application starts, navigate to `http://localhost:80` in your web browser or run:
-
 ```
 curl localhost:80
 curl localhost:80
@@ -101,13 +91,7 @@ web1: Total number of visits is: 2
 $ curl localhost:80
 web2: Total number of visits is: 3
 ```
-
-
-
 ## Stop and remove the containers
-
 ```
 $ docker compose down
 ```
-
->>>>>>> 8625751 (this is first commit)
