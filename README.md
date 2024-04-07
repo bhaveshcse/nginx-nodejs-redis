@@ -2,7 +2,7 @@
 This is sample project to show number of website visitors.
 =======
 ## Compose sample application
-## Node.js application with Nginx proxy and Redis database
+## Node.js application with Nginx proxy and Redis database.
 Project structure:
 ```
 .
